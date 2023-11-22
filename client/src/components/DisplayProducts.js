@@ -55,7 +55,7 @@ const DisplayProducts = () => {
                 provider
             );
             try {
-
+                
                 const Pdata = await contract.getProducts();
                 console.log("data: ", Pdata);
                 setData(Pdata);
