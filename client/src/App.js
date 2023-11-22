@@ -24,9 +24,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/home" element={<Navigate replace to="/" />} />
-          <Route path="/workers" element={<DisplayWorkers />} />
+          <Route path="/employees" element={<DisplayWorkers />} />
           {/* <Route path="/nav" element={<Navbar />} /> */}
-          <Route path="/products" element={<DisplayProducts />} />
+          <Route path="/drugs" element={<DisplayProducts />} />
             <Route path="/status" element={<DisplayStatus />} />
             <Route path="/data" element={<DisplayData />} />
         </Routes>

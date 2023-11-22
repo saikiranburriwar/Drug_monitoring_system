@@ -56,46 +56,46 @@ modifier onlyOwner {
       _;
    }
 
-Product[] public products_list;
-Product private productInfo;
-Status[] public productStatus;
-Status private statusInfo;
-Worker[] public workers_list;
-Worker private workerInfo;
-Data[] public Data_list;
-Data private DataInfo;
+Product[] public drugs_list;
+Product private drugsInfo;
+Status[] public drugStatus;
+Status private statusData;
+Worker[] public employees_list;
+Worker private employeeInfo;
+Data[] public Drug_List;
+Data private DrugInfo;
 
 
-mapping(uint256 => Status[]) public product_Status;
-mapping (uint256 => Product) public products;
-mapping (uint256 => Worker) public workers;
+mapping(uint256 => Status[]) public drug_status;
+mapping (uint256 => Product) public drugs;
+mapping (uint256 => Worker) public employees;
 mapping (uint256 => Data[]) public data;
 
 
-function setWorker(string memory name) public  payable
+function setEmployee(string memory name) public  payable
 {
-    workerInfo=Worker(name,worker_id,block.timestamp);
-    workers[worker_id]=workerInfo;
-    workers_list.push(workerInfo);
+    employeeInfo=Worker(name,worker_id,block.timestamp);
+    employees[worker_id]=employeeInfo;
+    employees_list.push(employeeInfo);
     worker_id++;
 
 }
 
-function AddProduct(
+function AddDrug(
     string memory name,
     string memory price,
     string memory description,
     string memory reqtemp,
     string memory manufacturing) public payable
 {
-    productInfo=Product(product_id,name,price,description,reqtemp,manufacturing,block.timestamp);
-    products[product_id]=(productInfo);
-    products_list.push(productInfo);
+    drugsInfo=Product(product_id,name,price,description,reqtemp,manufacturing,block.timestamp);
+    drugs[product_id]=(drugsInfo);
+    drugs_list.push(drugsInfo);
     product_id++;
 
 }
 
-function AddStatus( string memory location,
+function AddDrugStatus( string memory location,
     
     string  memory temp,
     string  memory humidity,
@@ -106,38 +106,38 @@ function AddStatus( string memory location,
     bool flag
 ) public payable {
 
-    statusInfo= Status(location,block.timestamp,temp,humidity,heatindex,wid,pid,total_quantity,flag);
-    product_Status[pid].push(statusInfo);
-    productStatus.push(statusInfo);
+    statusData= Status(location,block.timestamp,temp,humidity,heatindex,wid,pid,total_quantity,flag);
+    drug_status[pid].push(statusData);
+    drugStatus.push(statusData);
 }
 
 
-function AddData( uint256 temp,
+function AddDrugData( uint256 temp,
     uint256 humidity,
     uint256 hindex,uint256 pid) public payable {
 
-        DataInfo = Data(temp,humidity,hindex,pid);
-        data[pid].push(DataInfo);
-        Data_list.push(DataInfo);
+        DrugInfo = Data(temp,humidity,hindex,pid);
+        data[pid].push(DrugInfo);
+        Drug_List.push(DrugInfo);
         }
-function getWorkerssList() public view returns(Worker[] memory)
+function getEmployeesList() public view returns(Worker[] memory)
 {
-    return workers_list;
+    return employees_list;
 }
 
-function getProductStatus(uint256 id) public view returns(Status[] memory){
+function getDrugStatus(uint256 id) public view returns(Status[] memory){
 
-    return product_Status[id];
+    return drug_status[id];
 }
 
-function getProductData(uint256 id) public view returns(Data[] memory){
+function getDrugData(uint256 id) public view returns(Data[] memory){
 
     return data[id];
 }
 
-function getProducts() public view returns(Product[] memory){
+function getDrugs() public view returns(Product[] memory){
 
-    return products_list ;
+    return drugs_list ;
 }
 
 

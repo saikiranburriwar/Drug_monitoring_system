@@ -18,7 +18,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import { deepPurple } from '@mui/material/colors';
 
-const pages = ['Home', 'Products', 'Workers', 'Status', 'Data'];
+const pages = ['Home', 'drugs', 'employees', 'Status', 'Data'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const darkTheme = createTheme({

@@ -53,7 +53,7 @@ const DisplayWorkers = () => {
             );
             let Wdata = null;
             try {
-                Wdata = await contract.getWorkerssList();
+                Wdata = await contract.getEmployeesList();
                 console.log("data: ", Wdata);
                 //console.log(contract);
                 setData(Wdata);

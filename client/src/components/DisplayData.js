@@ -154,7 +154,7 @@ const DisplayData = () => {
             );
             try {
 
-                const Wdata = await contract.getProductData(id);
+                const Wdata = await contract.getDrugData(id);
                 console.log("data: ", Wdata);
                 setData(Wdata);
                 console.log(Wdata)
