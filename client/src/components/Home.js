@@ -18,7 +18,7 @@ const Home = () => {
       >
         <ul style={{ marginTop: "2%" }}>
           <li>
-            Get data from sensors like temperature/humidity sensor and pass it
+            Get data from sensors like temperature/pressure sensor and pass it
             through <a href="https://nodered.org/">NODE-RED</a>
           </li>
           <li style={{ marginTop: "2%" }}>
@@ -27,7 +27,7 @@ const Home = () => {
           </li>
           <li style={{ marginTop: "2%" }}>
             Now users can see their data in real time using this frontend app
-            like Current temperature and humidity ,Product info like id,weight
+            like Current temperature and pressure ,Product info like id,weight
             etc ,worker id ,Location ,Delivery status
           </li>
         </ul>

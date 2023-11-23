@@ -36,7 +36,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const DisplayProducts = () => {
     const [ProductsList, setData] = useState();
-    const ContractAddress = "0xe96c65a16ED2C6FE993eE7F17dF81b4F39745C51"//"0x6Fc158C884a49A2e7e6e4754bc336e39bcCd583F" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
+    const ContractAddress = "0xF0576A26c3cFB5C0544806A91B2bFD876194d421"//"0xe96c65a16ED2C6FE993eE7F17dF81b4F39745C51" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
 
     async function requestAccount() {
         await window.ethereum.request({ method: "eth_requestAccounts" });
@@ -87,7 +87,7 @@ const DisplayProducts = () => {
                         <StyledTableCell>Product ID</StyledTableCell>
                         <StyledTableCell sx={{width: "40%"}}>Description</StyledTableCell>
                         <StyledTableCell>Price&nbsp;</StyledTableCell>
-                        <StyledTableCell>Required&nbsp;Temp.</StyledTableCell>
+                        <StyledTableCell>Required&nbsp;environmentTemp.</StyledTableCell>
                         <StyledTableCell align="right">Manufacturing&nbsp;Date</StyledTableCell>
 
                     </StyledTableRow>

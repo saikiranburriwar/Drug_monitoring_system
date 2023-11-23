@@ -13,8 +13,8 @@ contract Supplychain{
       owner = msg.sender;
    }
 
-uint256 product_id=0;
-uint256 worker_id=0;
+uint256 drug_id=0;
+uint256 employee_id=0;
 
 struct Product{
     uint256 id;
@@ -29,12 +29,12 @@ struct Product{
 struct Status{
     string location;
     uint256 timestamp;
-    string temp;
-    string humidity;
-    string heatindex;
-    uint256 w_id;
-    uint256 p_id;
-    uint256 total_quantity;
+    string environmentTemp;
+    string pressure;
+    string heatQ;
+    uint256 warehouseId;
+    uint256 drug_id;
+    uint256 drugTotalQuantatity;
     bool flag;
 }
 
@@ -45,8 +45,8 @@ struct Worker{
 }
 
 struct Data {
-    uint256 temp;
-    uint256 humidity;
+    uint256 environmentTemp;
+    uint256 pressure;
     uint256 hindex;
     uint256 pid;
 }
@@ -74,10 +74,10 @@ mapping (uint256 => Data[]) public data;
 
 function setEmployee(string memory name) public  payable
 {
-    employeeInfo=Worker(name,worker_id,block.timestamp);
-    employees[worker_id]=employeeInfo;
+    employeeInfo=Worker(name,employee_id,block.timestamp);
+    employees[employee_id]=employeeInfo;
     employees_list.push(employeeInfo);
-    worker_id++;
+    employee_id++;
 
 }
 
@@ -88,35 +88,35 @@ function AddDrug(
     string memory reqtemp,
     string memory manufacturing) public payable
 {
-    drugsInfo=Product(product_id,name,price,description,reqtemp,manufacturing,block.timestamp);
-    drugs[product_id]=(drugsInfo);
+    drugsInfo=Product(drug_id,name,price,description,reqtemp,manufacturing,block.timestamp);
+    drugs[drug_id]=(drugsInfo);
     drugs_list.push(drugsInfo);
-    product_id++;
+    drug_id++;
 
 }
 
 function AddDrugStatus( string memory location,
     
-    string  memory temp,
-    string  memory humidity,
-    string  memory heatindex,
+    string  memory environmentTemp,
+    string  memory pressure,
+    string  memory heatQ,
     uint256 wid,
     uint256 pid,
-    uint256 total_quantity,
+    uint256 drugTotalQuantatity,
     bool flag
 ) public payable {
 
-    statusData= Status(location,block.timestamp,temp,humidity,heatindex,wid,pid,total_quantity,flag);
+    statusData= Status(location,block.timestamp,environmentTemp,pressure,heatQ,wid,pid,drugTotalQuantatity,flag);
     drug_status[pid].push(statusData);
     drugStatus.push(statusData);
 }
 
 
-function AddDrugData( uint256 temp,
-    uint256 humidity,
+function AddDrugData( uint256 environmentTemp,
+    uint256 pressure,
     uint256 hindex,uint256 pid) public payable {
 
-        DrugInfo = Data(temp,humidity,hindex,pid);
+        DrugInfo = Data(environmentTemp,pressure,hindex,pid);
         data[pid].push(DrugInfo);
         Drug_List.push(DrugInfo);
         }

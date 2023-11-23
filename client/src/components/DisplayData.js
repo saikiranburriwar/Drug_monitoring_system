@@ -216,8 +216,8 @@ const DisplayData = () => {
                             <StyledTableRow>
                                 <StyledTableCell>Sr. No.</StyledTableCell>
                                 
-                                <StyledTableCell align="left">temp</StyledTableCell>
-                                <StyledTableCell align="left">humidity</StyledTableCell>
+                                <StyledTableCell align="left">environmentTemp</StyledTableCell>
+                                <StyledTableCell align="left">pressure</StyledTableCell>
                                 <StyledTableCell align="right">hindex(feels like)</StyledTableCell>
                             </StyledTableRow>
                         </TableHead>
@@ -229,8 +229,8 @@ const DisplayData = () => {
                                 >
                                     <StyledTableCell component="th" scope="row">{iterator + 1}</StyledTableCell>
                                    
-                                    <StyledTableCell align="left">{parseInt(row.temp._hex)}°C</StyledTableCell>
-                                    <StyledTableCell align="left">{parseInt(row.humidity._hex)}%</StyledTableCell>
+                                    <StyledTableCell align="left">{parseInt(row.environmentTemp._hex)}°C</StyledTableCell>
+                                    <StyledTableCell align="left">{parseInt(row.pressure._hex)}%</StyledTableCell>
                                     <StyledTableCell align="right">{parseInt(row.hindex._hex)}°C</StyledTableCell>
                                 </StyledTableRow>
                             ))}

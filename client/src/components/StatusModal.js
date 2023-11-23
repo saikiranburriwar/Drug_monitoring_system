@@ -50,10 +50,10 @@ export default function StatusModal({statusData}) {
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Temperature recorded: {statusData[2]}°C <br/>
             Timestamp: {convertTimestamp(statusData.timestamp._hex)} <br/>
-            Humidity: {statusData.humidity}%<br/>
-            Heat Index: {statusData.heatindex}°C<br/>
-            Product Id: {parseInt(statusData.p_id._hex)}<br/>
-            Total Quantity: {parseInt(statusData.total_quantity._hex)} Units<br/>
+            pressure: {statusData.pressure}%<br/>
+            Heat Index: {statusData.heatQ}°C<br/>
+            Product Id: {parseInt(statusData.drug_id._hex)}<br/>
+            Total Quantity: {parseInt(statusData.drugTotalQuantatity._hex)} Units<br/>
             
             </Typography>
             </Box>
