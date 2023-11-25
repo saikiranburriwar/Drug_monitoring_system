@@ -8,7 +8,14 @@
     font-size: large;
     /* border: 10px solid black */
   }
-
+  .vert{
+    width:60px;
+    height:40px;
+    padding-right:10px;
+  }
+.group-title{
+  color:rgb(57, 194, 194)
+}
 #heading {
     text-align: center;
     font-size: xx-large;

@@ -33,8 +33,8 @@ const darkTheme = createTheme({
 const theme = createTheme({
   palette: {
     primary: {
-      // Purple and green play nicely together.
-      main: '#673ab7',
+      
+      main: '#000000',
     },
     secondary: {
       // This is green.A700 as hex.
@@ -73,6 +73,7 @@ const ResponsiveAppBar = () => {
           <Typography
             variant="h6"
             noWrap
+            className='group-title'
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
@@ -120,6 +121,7 @@ const ResponsiveAppBar = () => {
           <Typography
             variant="h6"
             noWrap
+            className='group-title'
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >

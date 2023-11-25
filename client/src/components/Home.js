@@ -4,10 +4,10 @@ import "./Home.css";
 const Home = () => {
   return (
     <div class="landing-wrapper">
-      <img class="vert" src="https://www.asu.edu/asuthemes/5.0/assets/arizona-state-university-logo-vertical.png" alt="Arizona State University"></img>
-      <div id="heading">Supply Chain Management using Blockchain and IoT</div>
-      <h3>This app is for simulation of Pharmaceutical Supply Chain.</h3>
-      <h3> WORKING</h3>
+     
+      <div id="heading">Drug Monitoring System using Blockchain and React</div>
+      <h2>This app is for simulation of Pharmaceutical Supply Chain.</h2>
+
       <div
         style={{
           width: "50%",
@@ -17,32 +17,17 @@ const Home = () => {
         }}
       >
         <ul style={{ marginTop: "2%" }}>
-          <li>
-            Get data from sensors like temperature/pressure sensor and pass it
-            through <a href="https://nodered.org/">NODE-RED</a>
-          </li>
+          
+          
           <li style={{ marginTop: "2%" }}>
-            Then we pass that data as parameter in API(fastAPI) that calls smart
-            contract using web3.py and send data to etehreum blockchain
-          </li>
-          <li style={{ marginTop: "2%" }}>
-            Now users can see their data in real time using this frontend app
+             Users can see their data in real time using this frontend app
             like Current temperature and pressure ,Product info like id,weight
-            etc ,worker id ,Location ,Delivery status
+            etc ,worker id ,Location ,Delivery status and track the history of drug data over time.
           </li>
         </ul>
       </div>
-      <p>Please Connect to Ropsten test Network</p>
-      <p style={{ paddingTop: "3%" }}>
-        Made By:{" "}
-        <a
-          style={{ color: "#00BFFF" }}
-          href="https://github.com/CodeNinja04"
-          target="_blank"
-        >
-          Hemendra Sharma{" "}
-        </a>
-      </p>
+      
+      
     </div>
   );
 };
