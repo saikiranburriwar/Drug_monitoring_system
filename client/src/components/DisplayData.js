@@ -213,9 +213,9 @@ const DisplayData = () => {
                             <StyledTableRow>
                                 <StyledTableCell>Sr. No.</StyledTableCell>
                                 
-                                <StyledTableCell align="left">environmentTemp</StyledTableCell>
-                                <StyledTableCell align="left">pressure</StyledTableCell>
-                                <StyledTableCell align="right">hindex(feels like)</StyledTableCell>
+                                <StyledTableCell align="left">Temperature Threshold</StyledTableCell>
+                                <StyledTableCell align="left">Pressure</StyledTableCell>
+                                <StyledTableCell align="right">Heat-index(feels like)</StyledTableCell>
                             </StyledTableRow>
                         </TableHead>
                         <TableBody>
