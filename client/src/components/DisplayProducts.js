@@ -84,7 +84,7 @@ const DisplayProducts = () => {
                     <StyledTableRow>
                         <StyledTableCell>Sr. No.</StyledTableCell>
                         <StyledTableCell align="left">Product&nbsp;Name</StyledTableCell>
-                        <StyledTableCell>Product ID</StyledTableCell>
+                        <StyledTableCell>Drug ID</StyledTableCell>
                         <StyledTableCell sx={{width: "40%"}}>Description</StyledTableCell>
                         <StyledTableCell>Price&nbsp;</StyledTableCell>
                         <StyledTableCell>Required&nbsp;environmentTemp.</StyledTableCell>

@@ -52,7 +52,7 @@ export default function StatusModal({statusData}) {
             Timestamp: {convertTimestamp(statusData.timestamp._hex)} <br/>
             pressure: {statusData.pressure}%<br/>
             Heat Index: {statusData.heatQ}°C<br/>
-            Product Id: {parseInt(statusData.drug_id._hex)}<br/>
+            Drug Id: {parseInt(statusData.drug_id._hex)}<br/>
             Total Quantity: {parseInt(statusData.drugTotalQuantatity._hex)} Units<br/>
             
             </Typography>

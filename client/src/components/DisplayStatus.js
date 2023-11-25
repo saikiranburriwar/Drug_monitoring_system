@@ -72,16 +72,13 @@ const DisplayStatus = () => {
         <center>
         <div style={{padding: "2.5%"}}>
             <div>
-                {/* <TextField variant="outlined" id="outlined" label="Enter Product ID" onChange={(e) => setId(e.target.value)} />
-                <Button variant="contained" endIcon={<SendIcon />} onClick={getStatus} >
-                Send
-                </Button> */}
+                
                 <Paper
                 sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 200 }}
                 >
                 <InputBase
                     sx={{ ml: 1, flex: 1 }}
-                    placeholder="Enter Product ID"
+                    placeholder="Enter drug ID"
                     onChange= {(e) => setId(e.target.value)}
                 />
                 <IconButton sx={{ p: '10px' }} aria-label="search" onClick={getStatus}>
