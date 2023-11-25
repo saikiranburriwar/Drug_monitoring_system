@@ -26,7 +26,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import StatusModal from './StatusModal.js';
 
 const DisplayStatus = () => {
-    const ContractAddress = "0x867B1a27dB1a3cAaEf483b39efF44a2B44A88486" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
+    const ContractAddress = "0xc6e475F6aF5B69F992e43Fb8BDFB32C88B09b7b8" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
     const [id, setId] = useState(1);
     const [data, setData] = useState();
 
@@ -97,7 +97,7 @@ const DisplayStatus = () => {
                 </Box>
             ) : (
                 <div>
-                    <h1>Product Status</h1>
+                    <h1>Drug Status</h1>
 
                 <Timeline position="left">
                 {data.map((row, iterator) => (
@@ -117,6 +117,14 @@ const DisplayStatus = () => {
                             <Typography sx={{color: "lightgreen"}}>Temperature recorded: {row[2]}°C</Typography> 
                         : 
                             <Typography sx={{color: "orange"}}>Temperature recorded: {row[2]}°C</Typography>}
+                            {parseInt(row[2], 10)<2? 
+                            <Typography sx={{color: "lightgreen"}}>Pressure recorded: {row[3]} atm</Typography> 
+                        : 
+                            <Typography sx={{color: "orange"}}>Pressure recorded: {row[3]}atm</Typography>}
+                            {parseInt(row[2], 10)<25? 
+                            <Typography sx={{color: "lightgreen"}}>Heat Index recorded: {row[4]}°C </Typography> 
+                        : 
+                            <Typography sx={{color: "orange"}}>Heat Index: {row[4]} °C</Typography>}
                         </TimelineContent>
                         
                     </TimelineItem> 

@@ -13,7 +13,7 @@ Smart Contract based Drug Monitoring System for finding counterfiet drugs
 
 compile and Run supplychain.sol in Remix IDE and the deploy in metamask environment
 once it is deployed get the contract address from the deployed instance.
-Inorder to save product status or set products, workers or other data you can use UI provided in the IDE to execute any transactions
+Inorder to save Drug Status or set products, workers or other data you can use UI provided in the IDE to execute any transactions
 Replace the contact address in client code by following the below steps.
 
 ### Client/Frontend
