@@ -26,7 +26,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import StatusModal from './StatusModal.js';
 
 const DisplayStatus = () => {
-    const ContractAddress = "0x1563F98196AA8bD393abD48C01F8624469B45387" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
+    const ContractAddress = "0x4D9FC8bb369f118076Af2b471555fcB216246FB8" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
     const [id, setId] = useState(1);
     const [data, setData] = useState();
 
@@ -113,15 +113,15 @@ const DisplayStatus = () => {
                         {parseInt(row[2], 10)<25? 
                             <Typography sx={{color: "lightgreen"}}>Temperature recorded: {row[2]}°C</Typography> 
                         : 
-                            <Typography sx={{color: "orange"}}>Temperature recorded: {row[2]}°C</Typography>}
+                            <Typography sx={{color: "red"}}>Temperature recorded: {row[2]}°C</Typography>}
                             {parseInt(row[3], 10)<5? 
                             <Typography sx={{color: "lightgreen"}}>Pressure recorded: {row[3]} wc</Typography> 
                         : 
-                            <Typography sx={{color: "orange"}}>Pressure recorded: {row[3]}wc</Typography>}
+                            <Typography sx={{color: "red"}}>Pressure recorded: {row[3]}wc</Typography>}
                             {parseInt(row[4], 10)<25? 
                             <Typography sx={{color: "lightgreen"}}>Heat Index recorded: {row[4]}°C </Typography> 
                         : 
-                            <Typography sx={{color: "orange"}}>Heat Index: {row[4]} °C</Typography>}
+                            <Typography sx={{color: "red"}}>Heat Index: {row[4]} °C</Typography>}
                         </TimelineContent>
                         
                     </TimelineItem> 
