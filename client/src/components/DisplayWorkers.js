@@ -39,7 +39,7 @@ const DisplayWorkers = () => {
     const [workersList, setData] = useState();
     async function getWorker() {
     
-        const ContractAddress = "0xc6e475F6aF5B69F992e43Fb8BDFB32C88B09b7b8"
+        const ContractAddress = "0x1563F98196AA8bD393abD48C01F8624469B45387"
         if (typeof window.ethereum !== "undefined") {
             await requestAccount();
             const provider = new ethers.providers.Web3Provider(window.ethereum);

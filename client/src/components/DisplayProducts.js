@@ -36,8 +36,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const DisplayProducts = () => {
     const [ProductsList, setData] = useState();
-    const ContractAddress = "0xc6e475F6aF5B69F992e43Fb8BDFB32C88B09b7b8"//"0xe96c65a16ED2C6FE993eE7F17dF81b4F39745C51" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
-   
+    const ContractAddress = "0x1563F98196AA8bD393abD48C01F8624469B45387"//"0xe96c65a16ED2C6FE993eE7F17dF81b4F39745C51" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
+    
     async function requestAccount() {
         await window.ethereum.request({ method: "eth_requestAccounts" });
     }
@@ -83,7 +83,7 @@ const DisplayProducts = () => {
                 <TableHead>
                     <StyledTableRow>
                         <StyledTableCell>Sr. No.</StyledTableCell>
-                        <StyledTableCell align="left">Product&nbsp;Name</StyledTableCell>
+                        <StyledTableCell align="left">Drug&nbsp;Name</StyledTableCell>
                         <StyledTableCell>Drug ID</StyledTableCell>
                         <StyledTableCell sx={{width: "40%"}}>Description</StyledTableCell>
                         <StyledTableCell>Price&nbsp;</StyledTableCell>

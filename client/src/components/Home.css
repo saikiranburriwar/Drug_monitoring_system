@@ -13,6 +13,11 @@
     height:40px;
     padding-right:10px;
   }
+  .developers{
+    display: block;
+    margin: auto;
+    margin-top: 250px;
+  }
 .group-title{
   color:rgb(57, 194, 194)
 }

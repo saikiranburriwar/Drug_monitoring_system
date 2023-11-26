@@ -132,7 +132,7 @@ const DisplayData = () => {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
     };
-    const ContractAddress = "0xc6e475F6aF5B69F992e43Fb8BDFB32C88B09b7b8" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
+    const ContractAddress = "0x1563F98196AA8bD393abD48C01F8624469B45387" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
     const [id, setId] = useState(1);
     const [data, setData] = useState();
 
@@ -227,7 +227,7 @@ const DisplayData = () => {
                                     <StyledTableCell component="th" scope="row">{iterator + 1}</StyledTableCell>
                                    
                                     <StyledTableCell align="left">{parseInt(row.environmentTemp._hex)}°C</StyledTableCell>
-                                    <StyledTableCell align="left">{parseInt(row.pressure._hex)}%</StyledTableCell>
+                                    <StyledTableCell align="left">{parseInt(row.pressure._hex)}wc</StyledTableCell>
                                     <StyledTableCell align="right">{parseInt(row.hindex._hex)}°C</StyledTableCell>
                                 </StyledTableRow>
                             ))}

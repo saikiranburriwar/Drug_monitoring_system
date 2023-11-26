@@ -1,5 +1,5 @@
 
-Smart Contract based Drug Monitoring System for finding counterfiet drugs
+Smart Contract based Drug-Health Monitoring System for finding counterfiet drugs
 
 
 <h3> Tech Stack </h3>
