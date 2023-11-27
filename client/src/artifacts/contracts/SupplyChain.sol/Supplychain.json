@@ -12,12 +12,12 @@
       "inputs": [
         {
           "internalType": "uint256",
-          "name": "temp",
+          "name": "environmentTemp",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "humidity",
+          "name": "pressure",
           "type": "uint256"
         },
         {
@@ -31,7 +31,7 @@
           "type": "uint256"
         }
       ],
-      "name": "AddData",
+      "name": "AddDrugData",
       "outputs": [],
       "stateMutability": "payable",
       "type": "function"
@@ -64,7 +64,7 @@
           "type": "string"
         }
       ],
-      "name": "AddProduct",
+      "name": "AddDrug",
       "outputs": [],
       "stateMutability": "payable",
       "type": "function"
@@ -78,17 +78,17 @@
         },
         {
           "internalType": "string",
-          "name": "temp",
+          "name": "environmentTemp",
           "type": "string"
         },
         {
           "internalType": "string",
-          "name": "humidity",
+          "name": "pressure",
           "type": "string"
         },
         {
           "internalType": "string",
-          "name": "heatindex",
+          "name": "heatQ",
           "type": "string"
         },
         {
@@ -103,7 +103,7 @@
         },
         {
           "internalType": "uint256",
-          "name": "total_quantity",
+          "name": "drugTotalQuantatity",
           "type": "uint256"
         },
         {
@@ -112,7 +112,7 @@
           "type": "bool"
         }
       ],
-      "name": "AddStatus",
+      "name": "AddDrugStatus",
       "outputs": [],
       "stateMutability": "payable",
       "type": "function"
@@ -125,16 +125,16 @@
           "type": "uint256"
         }
       ],
-      "name": "Data_list",
+      "name": "Drug_List",
       "outputs": [
         {
           "internalType": "uint256",
-          "name": "temp",
+          "name": "environmentTemp",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "humidity",
+          "name": "pressure",
           "type": "uint256"
         },
         {
@@ -168,12 +168,12 @@
       "outputs": [
         {
           "internalType": "uint256",
-          "name": "temp",
+          "name": "environmentTemp",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "humidity",
+          "name": "pressure",
           "type": "uint256"
         },
         {
@@ -198,18 +198,18 @@
           "type": "uint256"
         }
       ],
-      "name": "getProductData",
+      "name": "getDrugData",
       "outputs": [
         {
           "components": [
             {
               "internalType": "uint256",
-              "name": "temp",
+              "name": "environmentTemp",
               "type": "uint256"
             },
             {
               "internalType": "uint256",
-              "name": "humidity",
+              "name": "pressure",
               "type": "uint256"
             },
             {
@@ -239,7 +239,7 @@
           "type": "uint256"
         }
       ],
-      "name": "getProductStatus",
+      "name": "getDrugStatus",
       "outputs": [
         {
           "components": [
@@ -255,32 +255,32 @@
             },
             {
               "internalType": "string",
-              "name": "temp",
+              "name": "environmentTemp",
               "type": "string"
             },
             {
               "internalType": "string",
-              "name": "humidity",
+              "name": "pressure",
               "type": "string"
             },
             {
               "internalType": "string",
-              "name": "heatindex",
+              "name": "heatQ",
               "type": "string"
             },
             {
               "internalType": "uint256",
-              "name": "w_id",
+              "name": "warehouseId",
               "type": "uint256"
             },
             {
               "internalType": "uint256",
-              "name": "p_id",
+              "name": "drug_id",
               "type": "uint256"
             },
             {
               "internalType": "uint256",
-              "name": "total_quantity",
+              "name": "drugTotalQuantatity",
               "type": "uint256"
             },
             {
@@ -299,7 +299,7 @@
     },
     {
       "inputs": [],
-      "name": "getProducts",
+      "name": "getDrugs",
       "outputs": [
         {
           "components": [
@@ -349,7 +349,7 @@
     },
     {
       "inputs": [],
-      "name": "getWorkerssList",
+      "name": "getEmployeesList",
       "outputs": [
         {
           "components": [
@@ -385,7 +385,7 @@
           "type": "uint256"
         }
       ],
-      "name": "productStatus",
+      "name": "drugStatus",
       "outputs": [
         {
           "internalType": "string",
@@ -399,32 +399,32 @@
         },
         {
           "internalType": "string",
-          "name": "temp",
+          "name": "environmentTemp",
           "type": "string"
         },
         {
           "internalType": "string",
-          "name": "humidity",
+          "name": "pressure",
           "type": "string"
         },
         {
           "internalType": "string",
-          "name": "heatindex",
+          "name": "heatQ",
           "type": "string"
         },
         {
           "internalType": "uint256",
-          "name": "w_id",
+          "name": "warehouseId",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "p_id",
+          "name": "drug_id",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "total_quantity",
+          "name": "drugTotalQuantatity",
           "type": "uint256"
         },
         {
@@ -449,7 +449,7 @@
           "type": "uint256"
         }
       ],
-      "name": "product_Status",
+      "name": "drug_status",
       "outputs": [
         {
           "internalType": "string",
@@ -463,32 +463,32 @@
         },
         {
           "internalType": "string",
-          "name": "temp",
+          "name": "environmentTemp",
           "type": "string"
         },
         {
           "internalType": "string",
-          "name": "humidity",
+          "name": "pressure",
           "type": "string"
         },
         {
           "internalType": "string",
-          "name": "heatindex",
+          "name": "heatQ",
           "type": "string"
         },
         {
           "internalType": "uint256",
-          "name": "w_id",
+          "name": "warehouseId",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "p_id",
+          "name": "drug_id",
           "type": "uint256"
         },
         {
           "internalType": "uint256",
-          "name": "total_quantity",
+          "name": "drugTotalQuantatity",
           "type": "uint256"
         },
         {
@@ -508,7 +508,7 @@
           "type": "uint256"
         }
       ],
-      "name": "products",
+      "name": "drugs",
       "outputs": [
         {
           "internalType": "uint256",
@@ -557,7 +557,7 @@
           "type": "uint256"
         }
       ],
-      "name": "products_list",
+      "name": "drugs_list",
       "outputs": [
         {
           "internalType": "uint256",
@@ -606,7 +606,7 @@
           "type": "string"
         }
       ],
-      "name": "setWorker",
+      "name": "setEmployee",
       "outputs": [],
       "stateMutability": "payable",
       "type": "function"
@@ -619,7 +619,7 @@
           "type": "uint256"
         }
       ],
-      "name": "workers",
+      "name": "employees",
       "outputs": [
         {
           "internalType": "string",
@@ -648,7 +648,7 @@
           "type": "uint256"
         }
       ],
-      "name": "workers_list",
+      "name": "employees_list",
       "outputs": [
         {
           "internalType": "string",

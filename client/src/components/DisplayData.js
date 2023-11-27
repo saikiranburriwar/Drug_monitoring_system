@@ -132,7 +132,7 @@ const DisplayData = () => {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
     };
-    const ContractAddress = "0xEeD9e4D9d8A1D35c117b744eed61c78039d58493" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
+    const ContractAddress = "0x4D9FC8bb369f118076Af2b471555fcB216246FB8" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
     const [id, setId] = useState(1);
     const [data, setData] = useState();
 
@@ -154,7 +154,7 @@ const DisplayData = () => {
             );
             try {
 
-                const Wdata = await contract.getProductData(id);
+                const Wdata = await contract.getDrugData(id);
                 console.log("data: ", Wdata);
                 setData(Wdata);
                 console.log(Wdata)
@@ -188,16 +188,13 @@ const DisplayData = () => {
 
             {/* <TextField id="standard-basic" label="Enter PID" variant="standard" onChange={(e) => setId(e.target.value)} /> */}
             <div style={{display: 'flex',justifyContent: 'center',marginTop:"3%" }}>
-                {/* <TextField variant="outlined" id="outlined" label="Enter Product ID" onChange={(e) => setId(e.target.value)} />
-                <Button variant="contained" endIcon={<SendIcon />} onClick={getStatus} >
-                Send
-                </Button> */}
+                
                 <Paper 
                     elevation={3} sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 200, }}
                 >
                     <InputBase
                         sx={{ ml: 1, flex: 1 }}
-                        placeholder="Enter Product ID"
+                        placeholder="Enter Drug ID"
                         onChange={(e) => setId(e.target.value)}
                     />
                     <IconButton sx={{ p: '10px' }} aria-label="search" onClick={getData}>
@@ -216,9 +213,9 @@ const DisplayData = () => {
                             <StyledTableRow>
                                 <StyledTableCell>Sr. No.</StyledTableCell>
                                 
-                                <StyledTableCell align="left">temp</StyledTableCell>
-                                <StyledTableCell align="left">humidity</StyledTableCell>
-                                <StyledTableCell align="right">hindex(feels like)</StyledTableCell>
+                                <StyledTableCell align="left">Temperature Threshold</StyledTableCell>
+                                <StyledTableCell align="left">Pressure</StyledTableCell>
+                                <StyledTableCell align="right">Heat-index(feels like)</StyledTableCell>
                             </StyledTableRow>
                         </TableHead>
                         <TableBody>
@@ -229,8 +226,8 @@ const DisplayData = () => {
                                 >
                                     <StyledTableCell component="th" scope="row">{iterator + 1}</StyledTableCell>
                                    
-                                    <StyledTableCell align="left">{parseInt(row.temp._hex)}°C</StyledTableCell>
-                                    <StyledTableCell align="left">{parseInt(row.humidity._hex)}%</StyledTableCell>
+                                    <StyledTableCell align="left">{parseInt(row.environmentTemp._hex)}°C</StyledTableCell>
+                                    <StyledTableCell align="left">{parseInt(row.pressure._hex)}wc</StyledTableCell>
                                     <StyledTableCell align="right">{parseInt(row.hindex._hex)}°C</StyledTableCell>
                                 </StyledTableRow>
                             ))}

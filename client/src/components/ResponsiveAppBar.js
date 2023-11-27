@@ -18,7 +18,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import { deepPurple } from '@mui/material/colors';
 
-const pages = ['Home', 'Products', 'Workers', 'Status', 'Data'];
+const pages = ['Home', 'drugs', 'employees', 'Status', 'Drug-info'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const darkTheme = createTheme({
@@ -33,8 +33,8 @@ const darkTheme = createTheme({
 const theme = createTheme({
   palette: {
     primary: {
-      // Purple and green play nicely together.
-      main: '#673ab7',
+      
+      main: '#000000',
     },
     secondary: {
       // This is green.A700 as hex.
@@ -73,6 +73,7 @@ const ResponsiveAppBar = () => {
           <Typography
             variant="h6"
             noWrap
+            className='group-title'
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
@@ -82,6 +83,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
+              className='profile'
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
@@ -120,6 +122,7 @@ const ResponsiveAppBar = () => {
           <Typography
             variant="h6"
             noWrap
+            className='group-title'
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >

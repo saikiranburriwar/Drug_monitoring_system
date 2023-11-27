@@ -26,7 +26,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import StatusModal from './StatusModal.js';
 
 const DisplayStatus = () => {
-    const ContractAddress = "0xEeD9e4D9d8A1D35c117b744eed61c78039d58493" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
+    const ContractAddress = "0x4D9FC8bb369f118076Af2b471555fcB216246FB8" //"0xFa56954976bA7d616945c09A7e360499e7038d98";
     const [id, setId] = useState(1);
     const [data, setData] = useState();
 
@@ -49,7 +49,7 @@ const DisplayStatus = () => {
             );
             try {
 
-                const Sdata = await contract.getProductStatus(id);
+                const Sdata = await contract.getDrugStatus(id);
                 
                 console.log("data: ", Sdata);
                 setData(Sdata);
@@ -72,16 +72,13 @@ const DisplayStatus = () => {
         <center>
         <div style={{padding: "2.5%"}}>
             <div>
-                {/* <TextField variant="outlined" id="outlined" label="Enter Product ID" onChange={(e) => setId(e.target.value)} />
-                <Button variant="contained" endIcon={<SendIcon />} onClick={getStatus} >
-                Send
-                </Button> */}
+                
                 <Paper
                 sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 200 }}
                 >
                 <InputBase
                     sx={{ ml: 1, flex: 1 }}
-                    placeholder="Enter Product ID"
+                    placeholder="Enter drug ID"
                     onChange= {(e) => setId(e.target.value)}
                 />
                 <IconButton sx={{ p: '10px' }} aria-label="search" onClick={getStatus}>
@@ -97,7 +94,7 @@ const DisplayStatus = () => {
                 </Box>
             ) : (
                 <div>
-                    <h1>Product Status</h1>
+                    <h1>Drug Status</h1>
 
                 <Timeline position="left">
                 {data.map((row, iterator) => (
@@ -116,7 +113,15 @@ const DisplayStatus = () => {
                         {parseInt(row[2], 10)<25? 
                             <Typography sx={{color: "lightgreen"}}>Temperature recorded: {row[2]}°C</Typography> 
                         : 
-                            <Typography sx={{color: "orange"}}>Temperature recorded: {row[2]}°C</Typography>}
+                            <Typography sx={{color: "red"}}>Temperature recorded: {row[2]}°C</Typography>}
+                            {parseInt(row[3], 10)<5? 
+                            <Typography sx={{color: "lightgreen"}}>Pressure recorded: {row[3]} wc</Typography> 
+                        : 
+                            <Typography sx={{color: "red"}}>Pressure recorded: {row[3]}wc</Typography>}
+                            {parseInt(row[4], 10)<25? 
+                            <Typography sx={{color: "lightgreen"}}>Heat Index recorded: {row[4]}°C </Typography> 
+                        : 
+                            <Typography sx={{color: "red"}}>Heat Index: {row[4]} °C</Typography>}
                         </TimelineContent>
                         
                     </TimelineItem> 
